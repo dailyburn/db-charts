@@ -1,0 +1,14 @@
+{
+	"name": "db-charts",
+	"version": "0.0.1",
+	"keywords": ["charts", "canvas"],
+	"author": "DailyBurn <dev@dailyburn.com>",
+	"main": "./lib/graph",
+	"dependencies": {
+	  "underscore": "1.5.x",
+		"canvas": "1.1.x"
+	},
+	"homepage": "https://github.com/DailyBurn/db-charts",
+	"repository": "https://github.com/DailyBurn/db-charts",
+	"license": "MIT"
+}
