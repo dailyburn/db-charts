@@ -50,7 +50,8 @@ http.createServer(function(req, res) {
   var last_bar_datum = bar_chart_data[bar_chart_data.length - 1];
   
   var graphs = [
-    { type: 'bar', data: bar_chart_data, total_time: last_bar_datum.time + last_bar_datum.duration, max_value: 30, options: { fill_style: 'rgba(2,18,32,.75)' } },
+    { type: 'grid', rows: { count: 3, options: { stroke_style: 'rgba(0,0,0,.3)', line_width: 4 } }, cols: { count: 5, options: { stroke_style: '#900', line_width: 1 }} },
+    { type: 'bar', data: bar_chart_data, total_time: last_bar_datum.time + last_bar_datum.duration, max_value: 30, options: { fill_style: 'rgba(2,18,32,.9)' } },
     { type: 'line', data: line_chart2_data, total_time: last_line2_datum.time, max_value: 45, options: { line_width: 6, stroke_style: '#090', bezier_curve: false } },
     { type: 'line', data: line_chart_data, total_time: last_line_datum.time, max_value: 20, options: { line_width: 4, stroke_style: 'rgba(110,0,0,.8)' } }
   ];

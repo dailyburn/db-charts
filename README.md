@@ -103,11 +103,24 @@ The final line graph element will look something like this:
 **NOTE:** You will most likely want to order line graph data by its time before sending it off to be graphed.  We
 make no assumptions about how data should be ordered.
 
+#### Grid Marks
+
+You can optionally mark your data into equal sections using grid marks.  Splitting into five columns will add six
+vertical lines (one on either side of the graph and four divisive lines).  Likewise, splitting into five rows will
+add size horizontal lines (one on either side of the graph and four divisive lines).
+
+A grid object takes on the following form:
+
+		var grid = { type: 'grid', rows: { count: 5, options: { line_width: 1, stroke_style: '#000' }}, cols: { count: 3, options: { line_width: 2, stroke_style: '#900' } } };
+		
+You may omit either the rows or the cols attribute if you only want one and not the other.  As before, `stroke_style` can
+take an rgba value to generate alpha transparency.
+
 #### Combining graphs
 
 As mentioned before, you can combine as many graphs as you want:
 
-		db_charts.graph(res, dimensions, [bar_graph, line_graph]);
+		db_charts.graph(res, dimensions, [grid, bar_graph, line_graph]);
 		
 See [this example](examples/multi.js) for a working example.
 
