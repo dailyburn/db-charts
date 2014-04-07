@@ -56,5 +56,5 @@ http.createServer(function(req, res) {
     { type: 'line', data: line_chart_data, total_time: last_line_datum.time, max_value: 20, options: { line_width: 4, stroke_style: 'rgba(110,0,0,.8)' } }
   ];
   
-  db_charts.graph(res, dimensions, graphs);
+  db_charts.graph(res, dimensions, graphs, '990000');
 }).listen(8080, '127.0.0.1');

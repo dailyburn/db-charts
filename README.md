@@ -124,6 +124,12 @@ As mentioned before, you can combine as many graphs as you want:
 		
 See [this example](examples/multi.js) for a working example.
 
+####Background Color
+
+When combining graphs, you can pass an optional background color.  The background color must be a six character hex code:
+
+    db_charts.graph(res, dimensions, [grid, bar_graph, line_graph], '000000');
+
 ## Contributing
 
 1. Fork it
